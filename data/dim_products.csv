@@ -1,0 +1,11 @@
+product_sku,product_name,category,supplier_id,unit_selling_price,unit_cost,annual_holding_cost_per_unit
+SKU-INV-001,Industrial Smart Sensor Hub,Industrial IoT,SUP-101,145.0,72.0,4.5
+SKU-INV-002,Heavy-Duty Hydraulic Seal Kit,Mechanical Hardware,SUP-102,38.5,14.2,1.2
+SKU-INV-003,Precision CNC Drill Bit Set,Tools & Machining,SUP-103,89.0,41.0,2.8
+SKU-INV-004,Modular Pneumatic Valve 24V,Pneumatics,SUP-101,112.0,56.5,3.9
+SKU-INV-005,Thermal Imaging Diagnostic Unit,Testing & Measurement,SUP-104,420.0,230.0,12.0
+SKU-INV-006,Automated Conveyor Roller 50mm,Material Handling,SUP-102,28.0,11.0,1.1
+SKU-INV-007,Servo Motor Controller Board,Industrial IoT,SUP-103,195.0,95.0,5.5
+SKU-INV-008,High-Torque Stepper Motor NEMA23,Electromechanical,SUP-104,64.0,29.5,2.2
+SKU-INV-009,Fiber Optic Industrial Transceiver,Networking,SUP-105,85.0,37.0,2.5
+SKU-INV-010,Lithium-Ion Backup Pack 48V,Power Systems,SUP-105,350.0,190.0,10.0

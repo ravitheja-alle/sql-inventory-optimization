@@ -1,0 +1,5 @@
+warehouse_id,warehouse_name,location,capacity_sqft,utilization_pct
+WH-EAST-01,Northeast Distribution Hub,"New Jersey, USA",120000,84.5
+WH-MIDW-02,Midwest Central Fulfillment,"Chicago, USA",185000,91.2
+WH-WEST-03,Pacific Coast Logistics Hub,"California, USA",140000,78.0
+WH-SOUT-04,Gulf Coast Terminal,"Texas, USA",95000,68.4

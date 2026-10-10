@@ -1,0 +1,52 @@
+// =============================================================================
+// Project: SQL Sales & Inventory Optimization Analysis
+// Power BI DAX Measures Reference
+// =============================================================================
+
+// 1. Working Capital & Inventory Valuation
+Total Inventory Valuation = 
+SUM(inventory_stock[inventory_valuation])
+
+Total Units on Hand = 
+SUM(inventory_stock[current_stock])
+
+Total Annual COGS = 
+SUM(fact_sales_orders[total_cogs])
+
+// 2. Inventory Turnover & Days on Hand (DSI / DOH)
+Inventory Turnover Ratio = 
+DIVIDE(
+    [Total Annual COGS],
+    [Total Inventory Valuation],
+    0
+)
+
+Days Sales of Inventory (DSI) = 
+DIVIDE(
+    [Total Inventory Valuation] * 365,
+    [Total Annual COGS],
+    0
+)
+
+// 3. Stockout Risk & Replenishment Measures
+Stockout Risk SKU Count = 
+CALCULATE(
+    DISTINCTCOUNT(inventory_stock[product_sku]),
+    inventory_stock[current_stock] < inventory_stock[reorder_point]
+)
+
+Overstocked SKU Count = 
+CALCULATE(
+    DISTINCTCOUNT(inventory_stock[product_sku]),
+    inventory_stock[current_stock] > (inventory_stock[reorder_point] * 3.5)
+)
+
+Tied Capital in Overstocked Items ($) = 
+CALCULATE(
+    [Total Inventory Valuation],
+    inventory_stock[current_stock] > (inventory_stock[reorder_point] * 3.5)
+)
+
+// 4. Warehouse Space Utilization Average %
+Avg Warehouse Space Utilization % = 
+AVERAGE(dim_warehouses[utilization_pct])
