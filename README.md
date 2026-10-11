@@ -132,7 +132,7 @@ WHERE i.current_stock < i.reorder_point;
 ## 🚀 How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/sql-sales-inventory-optimization.git
+   git clone https://github.com/ravitheja-alle/sql-sales-inventory-optimization.git
    ```
 2. Execute SQL scripts in order:
    - `sql/01_inventory_schema.sql`
